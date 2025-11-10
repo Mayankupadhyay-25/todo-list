@@ -2,11 +2,14 @@ const express = require("express");
 const router = express.Router();
 
 //import the controller
-const {createTodo}= require("../controllers/createTodo");
+const {createTodo} = require("../controllers/createTodo");
 const {getTodo,getTodobyId}= require("../controllers/getTodo");
+const {updateTodo} = require("../controllers/updateTodo");
 
 //define API routes
-router.post("/createTodo", createTodo); 
-router.get("/getTodos",getTodo);  
-router.get("/getTodos/:id",getTodobyId)
+router.post("/todos", createTodo); 
+router.get("/todos", getTodo);  
+router.get("/todos/:id", getTodobyId);
+router.put("/todos/:id", updateTodo);
+
 module.exports = router;
