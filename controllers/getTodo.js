@@ -16,9 +16,9 @@
             message:"Entire rodo data is featched successfully",
       })
     }
-      catch(err0r){
+      catch(err){
           console.log(err);
-          res.ststus(500)
+          res.status(500)
           .json({
             success:false,
             error:err.message,
