@@ -8,15 +8,15 @@ exports.updateTodo = async (req, res) => {
         const { title, description } = req.body;
 
         // Find the existing todo first
-        const existingTodo = await Todo.findById(id);
+      //   const existingTodo = await Todo.findById(id);
         
         // Check if todo exists
-        if (!existingTodo) {
-            return res.status(404).json({
-                success: false,
-                message: "Todo not found"
-            });
-        }
+      //   if (!existingTodo) {
+      //       return res.status(404).json({
+      //           success: false,
+      //           message: "Todo not found"
+      //       });
+      //   }
 
         // Update the todo with new: true to get the updated document
         const todo = await Todo.findByIdAndUpdate(
